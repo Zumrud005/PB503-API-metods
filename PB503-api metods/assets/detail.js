@@ -5,15 +5,25 @@ const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get("id");
 
 
+
 function getDataById(endpoint,id){
-     fetch(`${BASE_URL}/${endpoint}/${id}`).then((res)=>{
-       return res.json()
-       .then((data)=>{
-       displayDetails(data)
-       }).catch((err)=>{
-        console.log(err)
+
+    document.getElementById("spinner").style.display = "block"
+
+    setTimeout(() => {
+        
+        fetch(`${BASE_URL}/${endpoint}/${id}`).then((res)=>{
+          return res.json()
+          .then((data)=>{
+          displayDetails(data)
+          document.getElementById("spinner").style.display = "none"
+          document.getElementById("content").style.display = "block"
+
+          }).catch((err)=>{
+           console.log(err)
+       })
     })
-})
+    }, 2000);
 }
 
 
@@ -35,6 +45,12 @@ function displayDetails(product){
     price.textContent = product.price
     rating.textContent = product.rating.rate
     category.textContent = product.category
+}
+
+
+window.onload = function(){
+    getDataById("products", productId);
+
 }
 
 function goBack() {
