@@ -1,0 +1,76 @@
+.products th{
+    color: white !important;
+    background-color: #04aa6d;
+    padding: 8px 12px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.products{
+    margin-top: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tdStyle{
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    max-width: 200px; 
+   
+    cursor: pointer;
+}
+
+
+.px-4{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.place-items-center{
+    place-items: center;
+}
+
+.products tbody td{
+    border: 1px solid #f2f2f2;
+    padding: 8px;
+    min-width: 130px;
+}
+
+
+table tr:hover {
+    background-color: #f2f2f2; 
+    transition: background-color 0.1s ease-in-out; 
+}
+
+.linkStyle{
+    text-decoration: none;
+    color: green;
+    font-weight: 600;
+  
+}
+
+.deleteStyle{
+
+    color: red !important;
+    font-weight: 600 !important;
+   
+
+
+}
+
+
+.footer{
+    background-color: #282a35;
+    color: #fff;
+    padding: 20px;
+    height: 70px;
+    margin-top: 50px !important;
+}
+
+h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
